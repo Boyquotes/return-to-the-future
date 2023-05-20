@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3a13cbx2618q"]
+
+[ext_resource type="PackedScene" uid="uid://cv5xsabe76ck" path="res://Assets/models/spaceship.glb" id="1_7q75u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dnapr"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.0470588)
+metallic = 1.0
+roughness = 0.0
+
+[node name="spaceship" instance=ExtResource("1_7q75u")]
+
+[node name="Cube001" parent="." index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_dnapr")
