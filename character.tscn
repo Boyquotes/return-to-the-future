@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg3al7cj441kh"]
+
+[ext_resource type="PackedScene" uid="uid://cslagjdg4h8oc" path="res://Assets/models/character.glb" id="1_2y2ly"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l2fhq"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.2)
+metallic = 1.0
+roughness = 0.0
+
+[node name="character" instance=ExtResource("1_2y2ly")]
+
+[node name="Sphere" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_l2fhq")

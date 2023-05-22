@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwk5q17m2cfxv"]
+[gd_scene load_steps=6 format=3 uid="uid://cwk5q17m2cfxv"]
 
 [ext_resource type="PackedScene" uid="uid://b3a13cbx2618q" path="res://spaceship.tscn" id="1_2rbhq"]
 [ext_resource type="Script" path="res://spaceship-player.gd" id="1_a2kic"]
+[ext_resource type="Script" path="res://SpaceCamera.gd" id="3_garrw"]
+[ext_resource type="PackedScene" uid="uid://bsjnxoywh0v8d" path="res://player.tscn" id="4_4hhlc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tvfpw"]
 size = Vector3(1.99307, 1.00729, 1.2198)
@@ -13,8 +15,20 @@ script = ExtResource("1_a2kic")
 
 [node name="spaceship" parent="Model" instance=ExtResource("1_2rbhq")]
 
-[node name="Camera3D" type="Camera3D" parent="Model"]
-transform = Transform3D(-3.78552e-08, 0.5, -0.866025, 2.18557e-08, 0.866025, 0.5, 1, 0, -4.37114e-08, -2.5, 2, 0)
+[node name="Pivot" type="Node3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01523, 0.445967, 0)
+
+[node name="SpaceCamera" type="Camera3D" parent="Model/Pivot"]
+transform = Transform3D(-3.78552e-08, 0.258819, -0.965926, -2.18557e-08, 0.965926, 0.258819, 1, 3.09086e-08, -3.09086e-08, -3.30364, 1.66135, 0.087)
+fov = 60.0
+far = 1000.0
+script = ExtResource("3_garrw")
+
+[node name="Player" parent="Model" instance=ExtResource("4_4hhlc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.215747, -0.414451, 0.11326)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Model"]
+omni_range = 1.70983
 
 [node name="CollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0586812, 0.0979875)

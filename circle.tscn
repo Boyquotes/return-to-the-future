@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4uwd3ciwsmgx"]
+
+[ext_resource type="PackedScene" uid="uid://dfx0vj7uqobe3" path="res://Assets/models/star-circle.glb" id="1_golw1"]
+
+[node name="Circle" type="Node3D"]
+
+[node name="star-circle" parent="." instance=ExtResource("1_golw1")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
