@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_h4e5p"]
 [ext_resource type="PackedScene" uid="uid://cwk5q17m2cfxv" path="res://spaceship-player.tscn" id="2_tmqwv"]
-[ext_resource type="PackedScene" uid="uid://b4uwd3ciwsmgx" path="res://circle.tscn" id="3_v30a5"]
+[ext_resource type="Script" path="res://CircleProductor.gd" id="3_n3h0n"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_h4e5p")
@@ -13,16 +13,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3174, 0, 0)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SpaceShip"]
 transform = Transform3D(-3.09086e-08, 0.707107, -0.707107, 3.09086e-08, 0.707107, 0.707107, 1, 0, -4.37114e-08, -2.77052, 1.81024, 0)
 
-[node name="Environment" type="Node3D" parent="."]
+[node name="CircleProductor" type="Node3D" parent="."]
+script = ExtResource("3_n3h0n")
 
-[node name="Circle" parent="Environment" instance=ExtResource("3_v30a5")]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="Circle2" parent="Environment" instance=ExtResource("3_v30a5")]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 100, 0, 0)
-
-[node name="Circle3" parent="Environment" instance=ExtResource("3_v30a5")]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 200, 0, 0)
-
-[node name="Circle4" parent="Environment" instance=ExtResource("3_v30a5")]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 300, 0, 0)
+[node name="Circles" type="Node3D" parent="CircleProductor"]

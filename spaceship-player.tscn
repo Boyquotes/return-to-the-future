@@ -30,6 +30,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.215747, -0.414451, 0.11326)
 [node name="OmniLight3D" type="OmniLight3D" parent="Model"]
 omni_range = 1.70983
 
-[node name="CollisionShape" type="CollisionShape3D" parent="."]
+[node name="Collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0586812, 0.0979875)
 shape = SubResource("BoxShape3D_tvfpw")
