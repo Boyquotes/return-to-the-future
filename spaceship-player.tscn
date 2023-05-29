@@ -9,6 +9,11 @@
 size = Vector3(1.99307, 1.00729, 1.2198)
 
 [node name="SpaceShip" type="CharacterBody3D"]
+collision_mask = 6
+motion_mode = 1
+platform_on_leave = 2
+platform_floor_layers = 4294901760
+platform_wall_layers = 4
 script = ExtResource("1_a2kic")
 
 [node name="Model" type="Node3D" parent="."]

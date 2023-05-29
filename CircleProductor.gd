@@ -2,7 +2,6 @@ extends Node3D
 
 @export var amount = 4
 @export var interval = 200.0
-@export var fresh_distance = 50.0
 var spaceship
 var spaceship_collider
 var circles
